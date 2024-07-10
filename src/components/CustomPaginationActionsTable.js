@@ -307,7 +307,11 @@ export default function EnhancedTable() {
                     tabIndex={-1}
                     key={row.id}
                     selected={isItemSelected}
-                    sx={{ cursor: 'pointer' }}
+                    sx={{ cursor: 'pointer',
+                        '&:nth-of-type(odd)': {
+                        backgroundColor: 'rgb(231,242,255)', // Change the background color for odd rows
+                      } 
+                    }}
                   >
                     <TableCell padding="checkbox">
                       <Checkbox
